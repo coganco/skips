@@ -1,0 +1,73 @@
+:root{--ink:#111;--paper:#F3F4F8;--c:#00AEEF;--m:#EC008C;--y:#FFE600;--w:#fff;--b:3px solid var(--ink);--sh:5px 5px 0 var(--ink)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font:16px/1.6 'Manrope',system-ui,sans-serif;background:var(--paper);color:var(--ink)}
+h1,h2,h3{font-family:'Bricolage Grotesque','Manrope',sans-serif;line-height:1.05;letter-spacing:-.03em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--m);outline-offset:2px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:9;background:var(--y);border-bottom:var(--b)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px;gap:12px}
+.logo{font:800 1.4rem 'Bricolage Grotesque';text-decoration:none;display:flex;gap:2px}
+.logo i{font-style:normal;width:12px;height:12px;border:2px solid var(--ink);border-radius:50%;margin:auto 0 auto 6px;background:var(--m)}
+nav ul{display:flex;gap:6px;list-style:none}
+nav li a{display:block;padding:6px 14px;border:2px solid transparent;font-weight:700;text-decoration:none;border-radius:99px}
+nav li a:hover{border-color:var(--ink);background:var(--w)}
+section{padding:80px 0;border-bottom:var(--b)}
+.hero{padding:56px 0 72px;display:grid;gap:32px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(2.6rem,6.5vw,5.2rem);font-weight:800}
+.hero p{max-width:46ch;margin:20px 0 28px;font-size:1.1rem}
+.btn{font:700 1rem 'Manrope';padding:12px 22px;border:var(--b);background:var(--w);box-shadow:var(--sh);cursor:pointer;text-decoration:none;display:inline-block;border-radius:10px;transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translate(2px,2px);box-shadow:3px 3px 0 var(--ink)}
+.btn:active{transform:translate(5px,5px);box-shadow:0 0 0}
+.btn.pri{background:var(--m);color:#fff}
+.btn.sm{padding:6px 12px;box-shadow:3px 3px 0 var(--ink);font-size:.85rem}
+.stage{position:relative;aspect-ratio:1;max-width:460px;width:100%;margin:auto;background:var(--w);border:var(--b);box-shadow:var(--sh);border-radius:20px;overflow:hidden;touch-action:none;cursor:grab}
+.stage .dot{position:absolute;width:56%;aspect-ratio:1;border-radius:50%;mix-blend-mode:multiply;will-change:transform}
+.stage small{position:absolute;left:14px;bottom:10px;font-weight:700;font-size:.85rem}
+.sec-h{max-width:640px;margin-bottom:36px}
+.sec-h h2{font-size:clamp(2rem,4vw,3rem);font-weight:800;margin-bottom:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;align-items:start}
+details{background:var(--w);border:var(--b);border-radius:14px;box-shadow:var(--sh);padding:18px 20px}
+details:nth-child(3n+1){background:#E6F7FF}details:nth-child(3n+2){background:#FFF3C4}details:nth-child(3n){background:#FFE3F3}
+summary{font:800 1.25rem 'Bricolage Grotesque';cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:10px}
+summary::after{content:'+';font-size:1.6rem;line-height:1}
+details[open] summary::after{content:'–'}
+details p,details li{margin-top:10px}details ul{padding-left:20px}
+.chips{display:flex;gap:6px;margin-top:12px}.chips b{width:34px;height:34px;border:2px solid var(--ink);border-radius:8px}
+.lab{display:grid;grid-template-columns:340px 1fr;gap:32px;align-items:start}
+.wheel{position:relative;width:100%;aspect-ratio:1;border-radius:50%;border:var(--b);box-shadow:var(--sh);background:conic-gradient(from 90deg,hsl(0 90% 55%),hsl(60 90% 55%),hsl(120 90% 45%),hsl(180 90% 45%),hsl(240 90% 60%),hsl(300 90% 55%),hsl(360 90% 55%));cursor:crosshair}
+.wheel::after{content:'';position:absolute;inset:26%;border-radius:50%;background:var(--paper);border:var(--b)}
+.pin{position:absolute;width:26px;height:26px;border:3px solid var(--ink);border-radius:50%;transform:translate(-50%,-50%);z-index:2;box-shadow:0 0 0 3px #fff}
+.panel{background:var(--w);border:var(--b);border-radius:14px;box-shadow:var(--sh);padding:22px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.tabs button{font:700 .9rem 'Manrope';padding:7px 14px;border:2px solid var(--ink);border-radius:99px;background:var(--w);cursor:pointer}
+.tabs button.on{background:var(--ink);color:#fff}
+.sw{display:grid;grid-template-columns:repeat(auto-fit,minmax(90px,1fr));gap:10px;margin:16px 0}
+.sw button{height:110px;border:var(--b);border-radius:12px;cursor:pointer;font:700 .8rem 'Manrope';display:flex;align-items:flex-end;padding:8px}
+.sw span{background:#fff;padding:1px 6px;border:2px solid var(--ink);border-radius:6px}
+label{font-weight:700;font-size:.9rem;display:block;margin-top:12px}
+input[type=range]{width:100%;accent-color:var(--m)}
+#desc{margin-top:8px}
+.studio{display:grid;grid-template-columns:1fr 260px;gap:24px;align-items:start}
+.canvas{background:var(--w);border:var(--b);border-radius:14px;box-shadow:var(--sh);padding:10px}
+.canvas svg{width:100%;display:block;border-radius:8px}
+.canvas svg .f{cursor:pointer;stroke:#111;stroke-width:2.5;stroke-linejoin:round}
+.canvas svg .f:hover{filter:brightness(1.08)}
+.canvas svg .sel{stroke:#EC008C;stroke-width:5;stroke-dasharray:9 5}
+.pal{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:12px 0}
+.pal button{aspect-ratio:1;border:2px solid var(--ink);border-radius:8px;cursor:pointer}
+#now{font-weight:800}
+.quiz{max-width:720px}
+.bar{height:14px;border:var(--b);border-radius:99px;background:var(--w);overflow:hidden;margin-bottom:20px}
+.bar div{height:100%;background:var(--c);width:0;transition:width .3s}
+.q{font:800 1.5rem/1.2 'Bricolage Grotesque';margin-bottom:18px}
+.opt{display:block;width:100%;text-align:left;font:600 1rem 'Manrope';padding:12px 16px;margin-bottom:10px;border:var(--b);border-radius:12px;background:var(--w);cursor:pointer}
+.opt:hover:not(:disabled){background:var(--y)}
+.opt.ok{background:#7CF29A}.opt.no{background:#FF9AA8}
+.exp{margin:14px 0;padding:14px;border:var(--b);border-radius:12px;background:#E6F7FF}
+.big{font:800 4rem 'Bricolage Grotesque'}
+footer{padding:28px 0;font-weight:600}
+@media(max-width:820px){.hero .wrap,.lab,.studio{grid-template-columns:1fr}nav ul{display:none}.wheel{max-width:340px;margin:auto}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
