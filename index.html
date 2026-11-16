@@ -1,57 +1,45 @@
 <!DOCTYPE html>
-<html lang="id">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ColorCraft — Teori Warna untuk Calon Desainer</title>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<nav><div class="wrap"><a class="logo" href="#top">ColorCraft<i></i></a>
-<ul><li><a href="#materi">Materi</a></li><li><a href="#lab">Lab Warna</a></li><li><a href="#studio">Studio</a></li><li><a href="#kuis">Kuis</a></li></ul></div></nav>
+<html lang="id"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>ColorCraft — Teori Warna & Studio Vektor</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head><body>
+<div class="aurora"><i></i><i></i><i></i></div>
+<aside><div class="brand">Color<i>Craft</i><small>Teori Warna · DKV</small></div>
+<nav id="menu"></nav></aside>
+<main>
+<section class="view" id="v-home">
+<p class="kick">Media belajar teori warna</p><h1>Warna yang dipilih dengan alasan.</h1>
+<p class="lead">Pahami warna primer, sekunder, dan tersier, racik palet harmoni, lalu terapkan di studio vektor yang bisa menggambar, mengedit, dan mengekspor.</p>
+<div class="cards" id="cards"></div><div class="hero-sw" id="hsw"></div><div class="stats"><div><b data-n="15">0</b>Topik materi</div><div><b data-n="14">0</b>Template vektor</div><div><b data-n="6">0</b>Skema harmoni</div><div><b data-n="16">0</b>Soal bergambar</div></div></section>
 
-<header class="hero" id="top"><div class="wrap">
-<div><h1>Warna itu keputusan desain, bukan tebakan.</h1>
-<p>Pelajari teori warna, racik palet di lab, lalu warnai template rumah, gunung, kota, dan logo di studio vektor.</p>
-<a class="btn pri" href="#lab">Mulai di Lab Warna</a> <a class="btn" href="#kuis">Langsung kuis</a></div>
-<div class="stage" id="stage"><div class="dot" style="background:#00AEEF;left:8%;top:6%"></div><div class="dot" style="background:#EC008C;right:8%;top:6%"></div><div class="dot" style="background:#FFE600;left:22%;bottom:6%"></div><small>Geser: Cyan + Magenta + Yellow saling campur</small></div>
-</div></header>
+<section class="view" id="v-materi" hidden><h2>Materi</h2><div class="split s1"><div class="list" id="mlist"></div><article class="panel" id="mbody"></article></div></section>
 
-<section id="materi"><div class="wrap">
-<div class="sec-h"><h2>Materi inti</h2><p>Buka satu per satu. Semuanya yang dipakai di studio dan kuis.</p></div>
-<div class="grid">
-<details open><summary>Model warna RGB &amp; CMYK</summary><p><b>RGB</b> (Red, Green, Blue) adalah warna cahaya, dipakai untuk layar. Campuran semua warna menjadi putih. <b>CMYK</b> (Cyan, Magenta, Yellow, Key/hitam) adalah warna tinta, dipakai untuk cetak. Campuran semua warna menjadi gelap.</p><div class="chips"><b style="background:#f00"></b><b style="background:#0f0"></b><b style="background:#00f"></b><b style="background:#0ae"></b><b style="background:#ec008c"></b><b style="background:#ffe600"></b></div></details>
-<details><summary>Hue, Saturation, Brightness</summary><p><b>Hue</b> adalah jenis warna (merah, biru, dst). <b>Saturation</b> adalah kemurnian warna, dari pucat sampai pekat. <b>Brightness</b> adalah terang gelapnya. Tiga slider ini sama dengan yang ada di Lab Warna.</p></details>
-<details><summary>Skema harmoni warna</summary><ul><li><b>Monokromatik</b>: satu hue, beda terang gelap.</li><li><b>Analogus</b>: hue bersebelahan, terasa tenang.</li><li><b>Komplementer</b>: hue berseberangan, kontras kuat.</li><li><b>Split komplementer</b>: satu warna + dua tetangga lawannya.</li><li><b>Triadik</b>: tiga hue berjarak 120°.</li></ul></details>
-<details><summary>Tint, tone, shade</summary><p><b>Tint</b> = warna + putih (lebih muda). <b>Tone</b> = warna + abu (lebih redup). <b>Shade</b> = warna + hitam (lebih tua). Trik cepat untuk bikin bayangan dan highlight di ilustrasi vektor.</p></details>
-<details><summary>Suhu &amp; psikologi warna</summary><p>Merah, oranye, kuning terasa hangat dan energik. Biru, hijau, ungu terasa dingin dan tenang. Biru sering dipakai logo bank dan teknologi (kesan percaya), hijau untuk alam dan kesehatan, merah untuk promo dan peringatan.</p></details>
-<details><summary>Kontras &amp; aturan 60-30-10</summary><p>Teks harus kontras dengan latarnya, kuning di atas putih susah dibaca. Untuk komposisi, pakai <b>60%</b> warna dominan, <b>30%</b> warna pendukung, <b>10%</b> warna aksen (tombol, judul penting).</p></details>
-</div></div></section>
+<section class="view" id="v-lab" hidden><h2>Lab Warna</h2>
+<div class="split s2"><div><div class="wheel" id="wheel"></div><label>Warna dasar<input type="color" id="base" value="#c2255c"></label><label>Kode HEX<input type="text" id="hex" value="#c2255c" maxlength="7"></label></div>
+<div class="panel"><div class="tabs" id="tabs"></div><div class="sw" id="sw"></div><p class="hint" id="desc"></p>
+<div class="info" id="info"></div>
+<label>Hue<input type="range" id="h" min="0" max="359"></label><label>Saturation<input type="range" id="s" min="5" max="100"></label><label>Lightness<input type="range" id="l" min="10" max="90"></label>
+<div class="row"><button class="btn" id="cssBtn">Salin CSS</button><button class="btn pri" id="toStudio">Pakai di Studio</button><span class="hint" id="copied"></span></div></div></div>
+<div class="split s1" style="margin-top:20px;grid-template-columns:1fr 1fr"><div class="panel"><h3>Tint · Tone · Shade</h3><div id="tts"></div><p class="hint">Klik swatch untuk menjadikannya warna dasar.</p></div><div class="panel"><h3>Gradien dari palet</h3><div class="grad" id="grad"></div><code id="gcode" class="hint"></code></div></div>
+<div class="split s1" style="margin-top:20px;grid-template-columns:1fr 1fr">
+<div class="panel"><h3>Primer · Sekunder · Tersier (RYB)</h3><div class="pt" id="pt"></div><p class="hint">Primer: merah, kuning, biru. Sekunder: oranye, hijau, ungu. Tersier: campuran primer dengan sekunder di sebelahnya.</p></div>
+<div class="panel"><h3>Pengecek kontras (WCAG)</h3><div class="row"><label>Teks<input type="color" id="fg" value="#1a1a2e"></label><label>Latar<input type="color" id="bg" value="#e8c98a"></label></div><div id="cprev" class="cprev">Diskon 50% hari ini</div><p id="cres" class="hint"></p></div></div>
+</section>
 
-<section id="lab" style="background:#fff"><div class="wrap">
-<div class="sec-h"><h2>Lab warna</h2><p>Klik atau geser di roda untuk memilih hue, lalu pilih skema. Klik kotak warna untuk menyalin kode HEX.</p></div>
-<div class="lab"><div class="wheel" id="wheel"></div>
-<div class="panel"><div class="tabs" id="tabs"></div>
-<div class="sw" id="sw"></div><p id="desc"></p>
-<label>Hue <input type="range" id="h" min="0" max="359" value="330"></label>
-<label>Saturation <input type="range" id="s" min="10" max="100" value="85"></label>
-<label>Brightness <input type="range" id="l" min="20" max="80" value="50"></label>
-<p style="margin-top:14px"><button class="btn sm" id="toStudio">Pakai palet ini di Studio</button> <span id="copied"></span></p></div></div>
-</div></section>
-
-<section id="studio"><div class="wrap">
-<div class="sec-h"><h2>Studio vektor</h2><p>Pilih template, klik bagian gambar (langit, atap, gunung, dll), lalu klik warna. Tiap bagian adalah shape vektor terpisah.</p></div>
-<div class="studio"><div><div class="tabs" id="tpl"></div><div class="canvas" id="canvas"></div></div>
-<div class="panel"><p>Bagian terpilih: <span id="now">belum ada</span></p>
+<section class="view" id="v-studio" hidden><h2>Studio Vektor</h2>
+<div class="split s3"><div><div class="tabs" id="tpl"></div><div class="canvas"><svg id="svg" viewBox="0 0 400 300"></svg></div>
+<p class="hint">Klik bentuk untuk memilih, seret untuk memindah. Delete menghapus, Ctrl+Z undo.</p></div>
+<div class="panel"><p class="hint" style="margin:0">Bentuk terpilih: <b id="now" style="color:var(--tx)">belum ada</b></p>
+<label>Isi (fill)<input type="color" id="fill"></label>
+<div class="row"><label>Garis<input type="color" id="strk"></label><label>Tebal<input type="range" id="sw2" min="0" max="12"></label></div>
+<label>Opasitas<input type="range" id="op" min="10" max="100"></label>
 <div class="pal" id="pal"></div>
-<label>Warna bebas <input type="color" id="free" value="#ec008c" style="width:100%;height:40px"></label>
-<p style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap"><button class="btn sm" id="reset">Reset</button><button class="btn sm" id="svg">Unduh SVG</button><button class="btn sm" id="png">Unduh PNG</button></p></div></div>
-</div></section>
+<div class="tool"><button class="btn" data-a="rect">+ Kotak</button><button class="btn" data-a="circ">+ Lingkaran</button><button class="btn" data-a="tri">+ Segitiga</button><button class="btn" data-a="star">+ Bintang</button><button class="btn" data-a="dup">Duplikat</button><button class="btn" data-a="del">Hapus</button><button class="btn" data-a="up">Ke depan</button><button class="btn" data-a="down">Ke belakang</button><button class="btn" data-a="rand">Acak palet</button></div>
+<div class="row"><button class="btn" id="undo">Undo</button><button class="btn" id="redo">Redo</button><button class="btn" id="reset">Reset</button></div>
+<div class="row"><button class="btn pri" id="dsvg">SVG</button><button class="btn pri" id="dpng">PNG</button></div>
+<p class="hint">Palet mengikuti skema dari Lab Warna.</p></div></div></section>
 
-<section id="kuis"><div class="wrap"><div class="sec-h"><h2>Kuis teori warna</h2><p>15 soal pilihan ganda. Setiap jawaban langsung ada pembahasannya.</p></div><div class="quiz panel" id="quiz"></div></div></section>
-
-<footer><div class="wrap">ColorCraft — media belajar Teori Warna untuk SMK.</div></footer>
-<script src="script.js"></script>
-</body>
-</html>
+<section class="view" id="v-kuis" hidden><h2>Kuis</h2><div class="panel" id="quiz" style="max-width:700px"></div></section>
+</main>
+<script src="script.js"></script></body></html>
